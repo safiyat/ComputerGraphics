@@ -10,14 +10,16 @@
 
 int main()
 {
-	int gdriver = DETECT, gmode, poly1[10], poly2[10], angle, r1, r2, r3, a, b, ch, unit;
+	int gdriver = DETECT, gmode, poly1[10], poly2[10], angle, r1, r2, r3, r4, r5, a, b, ch, unit;
 	initgraph(&gdriver, &gmode, "C:\\TURBOC3\\BGI");
 
-	unit = MAXY / 8;
+	unit = MAXY / 18;
 
-	r1 = 3 * sqrt(2) * unit;
-	r2 = sqrt(10) * unit;
-	r3 = sqrt(2) * unit;
+	r1 = sqrt(72) * unit;
+	r2 = sqrt(40) * unit;
+	r3 = sqrt(32) * unit;
+	r4 = sqrt(16) * unit;
+	r5 = sqrt(8) * unit;
 
 	a = 320;
 	b = 240;
@@ -30,14 +32,14 @@ int main()
 		poly1[0] = r1 * cos((angle + 135) / 57.3) + a;
 		poly1[1] = r1 * sin((angle + 135) / 57.3) + b;
 
-		poly1[2] = r2 * cos((angle + 71.56) / 57.3) + a;
-		poly1[3] = r2 * sin((angle + 71.56) / 57.3) + b;
+		poly1[2] = r2 * cos((angle + 108.43) / 57.3) + a;
+		poly1[3] = r2 * sin((angle + 108.43) / 57.3) + b;
 
-		poly1[4] = r3 * cos((angle - 45) / 57.3) + a;
-		poly1[5] = r3 * sin((angle - 45) / 57.3) + b;
+		poly1[4] = r5 * cos((angle + 135) / 57.3) + a;
+		poly1[5] = r5 * sin((angle + 135) / 57.3) + b;
 
-		poly1[6] = r2 * cos((angle - 161.56) / 57.3) + a;
-		poly1[7] = r2 * sin((angle - 161.56) / 57.3)+ b;
+		poly1[6] = r2 * cos((angle + 161.56) / 57.3) + a;
+		poly1[7] = r2 * sin((angle + 161.56) / 57.3)+ b;
 
 		poly1[8] = poly1[0];
 		poly1[9] = poly1[1];
@@ -47,14 +49,14 @@ int main()
 		poly2[0] = r3 * cos((angle + 135) / 57.3) + a;
 		poly2[1] = r3 * sin((angle + 135) / 57.3) + b;
 
-		poly2[2] = r2 * cos((angle + 18.43) / 57.3) + a;
-		poly2[3] = r2 * sin((angle + 18.43) / 57.3) + b;
+		poly2[2] = r4 * cos((angle + 90) / 57.3) + a;
+		poly2[3] = r4 * sin((angle + 90) / 57.3) + b;
 
-		poly2[4] = r1 * cos((angle - 45) / 57.3) + a;
-		poly2[5] = r1 * sin((angle - 45) / 57.3) + b;
+		poly2[4] = 0 + a;
+		poly2[5] = 0 + b;
 
-		poly2[6] = r2 * cos((angle - 108.43) / 57.3) + a;
-		poly2[7] = r2 * sin((angle - 108.43) / 57.3)+ b;
+		poly2[6] = r4 * cos((angle + 180) / 57.3) + a;
+		poly2[7] = r4 * sin((angle + 180) / 57.3)+ b;
 
 		poly2[8] = poly2[0];
 		poly2[9] = poly2[1];
